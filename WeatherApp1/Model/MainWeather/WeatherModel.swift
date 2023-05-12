@@ -22,7 +22,8 @@ struct WeatherModel {
     var latitude: Double
     
     var temperatureString: String {
-        return String(format: "%.1f", temperature)
+        let myInt = Int(temperature)
+        return String(myInt)
     }
     var humidityString: String {
         return String(mainHumidity)
@@ -43,14 +44,14 @@ struct WeatherModel {
     var conditionName: String {
         var weatherCondition: String
         switch conditionId {
-        case 200 ... 232: weatherCondition = "cloud.bolt"
-        case 300 ... 321: weatherCondition = "cloude.drizzle"
-        case 500 ... 531: weatherCondition = "cloud.rain"
-        case 600 ... 622: weatherCondition = "snowflake"
-        case 701 ... 781: weatherCondition = "cloud.fog"
-        case 800: weatherCondition = "sun.min"
-        case 801 ... 804: weatherCondition = "cloud.sun"
-        default: weatherCondition = "sun.max"
+        case 200 ... 232: weatherCondition = "thunderStorm"
+        case 300 ... 321: weatherCondition = "drizzle"
+        case 500 ... 531: weatherCondition = "rain"
+        case 600 ... 622: weatherCondition = "snow"
+        case 701 ... 781: weatherCondition = "fog"
+        case 800: weatherCondition = "sun"
+        case 801 ... 804: weatherCondition = "suncloud"
+        default: weatherCondition = "suncloud"
         }
         return weatherCondition
     }

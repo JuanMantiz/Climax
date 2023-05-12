@@ -3,4 +3,85 @@
    uuid = "13937AE6-C569-4B2F-8FF6-2E66F3DDBF8D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "408BF61D-ABC7-4F83-93F4-401C8998B1ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp1/Model/MainWeather/WeatherManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9387CEA2-3760-430C-AE2A-5E902BCF9138"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp1/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9387CEA2-3760-430C-AE2A-5E902BCF9138 - 5eec31fa03e4dfa9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp1.ViewController.date.getter : __C.NSDateFormatter"
+                  moduleName = "WeatherApp1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mantiz/Desktop/ResumeApps/WeatherApp1/WeatherApp1/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "9387CEA2-3760-430C-AE2A-5E902BCF9138 - fa215375789cf5fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp1.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; WeatherApp1.ViewController"
+                  moduleName = "WeatherApp1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mantiz/Desktop/ResumeApps/WeatherApp1/WeatherApp1/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1852">
+               </Location>
+               <Location
+                  uuid = "9387CEA2-3760-430C-AE2A-5E902BCF9138 - 9921153d7a0cfedc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp1.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;WeatherApp1.ViewController&gt;"
+                  moduleName = "WeatherApp1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mantiz/Desktop/ResumeApps/WeatherApp1/WeatherApp1/Controller/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1809">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

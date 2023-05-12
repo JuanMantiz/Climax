@@ -11,12 +11,12 @@ import CoreLocation
 
 protocol ForecastManagerDelegate {
     func didUpdateForecast(_ forecastManager: ForecastManager, forecast: ForecastModel)
-    func didFailWithError(error: Error)
+    func didFailWithErrorForecast(error: Error)
 }
 
 struct ForecastManager {
     
-    let forecastURL = "api.openweathermap.org/data/2.5/forecast?appid=54d176cbcf5f38995fc23d633dd4ab76&units=metric"
+    let forecastURL = "https://api.openweathermap.org/data/2.5/forecast?appid=54d176cbcf5f38995fc23d633dd4ab76&units=metric"
     
     var forecastDelegate: ForecastManagerDelegate?
     
@@ -37,7 +37,7 @@ struct ForecastManager {
         
         let task = sesion.dataTask(with: url) { data, response, error in
             if error != nil {
-                self.forecastDelegate?.didFailWithError(error: error!)
+                self.forecastDelegate?.didFailWithErrorForecast(error: error!)
                 print(error!)
                 return
             }
@@ -57,11 +57,11 @@ struct ForecastManager {
         do{
             let decodedData = try decoder.decode(ForecastData.self, from: forecastData)
             
-            let id1 = decodedData.list[0].weather.id
-            let id2 = decodedData.list[1].weather.id
-            let id3 = decodedData.list[2].weather.id
-            let id4 = decodedData.list[3].weather.id
-            let id5 = decodedData.list[4].weather.id
+            let id1 = decodedData.list[0].weather[0].id
+            let id2 = decodedData.list[1].weather[0].id
+            let id3 = decodedData.list[2].weather[0].id
+            let id4 = decodedData.list[3].weather[0].id
+            let id5 = decodedData.list[4].weather[0].id
             
             let temp1 = decodedData.list[0].main.temp
             let temp2 = decodedData.list[1].main.temp
@@ -74,7 +74,7 @@ struct ForecastManager {
             return forecast
         }
         catch {
-            forecastDelegate?.didFailWithError(error: error)
+            forecastDelegate?.didFailWithErrorForecast(error: error)
         }
         return nil
     }

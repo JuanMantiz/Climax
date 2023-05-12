@@ -8,16 +8,16 @@
 import Foundation
 
 struct ForecastData: Codable {
-    let list: [Item]
+    let list: [Forecast]
 }
 
-struct Item: Codable {
+struct Forecast: Codable {
     let main: MainForecast
-    let weather: WeatherForecast
+    let weather: [WeatherElement]
 }
 struct MainForecast: Codable {
-    let temp: Double
+    let temp: Float
 }
-struct WeatherForecast: Codable{
+struct WeatherElement: Codable{
     let id: Int
 }

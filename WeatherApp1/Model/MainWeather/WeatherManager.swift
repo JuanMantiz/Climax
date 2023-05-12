@@ -14,11 +14,11 @@ protocol WeatherManagerDelegate {
 }
 
 struct WeatherManager {
-    
+
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=54d176cbcf5f38995fc23d633dd4ab76&units=metric"
-    
+
     var delegate: WeatherManagerDelegate?
-    
+
     func fetchWeather (cityName: String){
         let urlString = "\(weatherURL)&q=\(cityName)"
         performRequest(with:urlString)
@@ -27,13 +27,13 @@ struct WeatherManager {
         let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
         performRequest(with: urlString)
     }
-    
+
     func performRequest (with urlString: String) {
-        
+
         if let url = URL(string: urlString) {
-            
+
             let sesion = URLSession(configuration: .default)
-            
+
             let task = sesion.dataTask(with: url) { data, response, error in
                 if error != nil {
                     self.delegate?.didFailWithError(error: error!)
@@ -53,7 +53,7 @@ struct WeatherManager {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
-            
+
             let id = decodedData.weather[0].id
             let weatherMain = decodedData.weather[0].main
             let name = decodedData.name
@@ -66,7 +66,7 @@ struct WeatherManager {
             let country = decodedData.sys.country
             let lat = decodedData.coord.lat
             let lon = decodedData.coord.lat
-            
+
             let weather = WeatherModel(conditionId: id, cityName: name, countryName: country, weatherMain: weatherMain, temperature: temp, mainHumidity: humidity, mainFeelsLike: feelsLike, tempMin: tempMin, tempMax: tempMax, windSpeed: windSpeed, longitude: lon, latitude: lat)
             return weather
         } catch {
@@ -74,5 +74,5 @@ struct WeatherManager {
             return nil
         }
     }
-    
+
 }
