@@ -22,8 +22,8 @@ This project is a weather app that shows the current weather dependin on the loc
 > Three main conditions related to weather: "Hmidity", "Wind" and "Feels like".
 > Forecast of the next five tha includes: "Day" "Image representation" and "Temperature".
 
-##Screenshots
-
+## Screenshots
+![My Image](climaxReadMe.jpg)
 ## Acknowledgments
 > The design was inspired in Sayid Moghadam "Weather App" design. https://www.figma.com/@moghadam 
 > The iconset used where created by Bora Dan "Degry Weather Iconset". https://www.figma.com/@bqra
