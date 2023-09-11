@@ -7,7 +7,7 @@
 * [Acknowledgments](#acknowledgments)
 
 ## General info
-This project is a weather app that shows the current weather dependin on the location or the place you are looking for. Also shows the current humidity, wind and feels like conditions. At below of the whole screen it shows the tempetarure of the next five days.
+This project is a weather app that shows the current weather depending on the location or the place you are looking for. Also shows the current humidity, wind and feels like conditions. At below of the whole screen it shows the tempetarure of the next five days.
 
 ## Technologies
 - API REST (Fetched from Open Weather)
